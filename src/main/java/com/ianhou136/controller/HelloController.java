@@ -15,9 +15,8 @@ public class HelloController {
     }
 
     @RequestMapping("/simpleParam")
-    public String simpleParam(HttpServletRequest request){
-        String name = request.getParameter("name");
-        String ageStr = request.getParameter("age");
-        return "OK" + name + ageStr;
+    public String simpleParam(String name, int age){
+        System.out.println(name + age);
+        return "OK" + name + age;
     }
 }
