@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class EmpServiceA implements EmpService {
+public class EmpServiceB implements EmpService {
 
     @Autowired
     private EmpDao empDao;
@@ -22,9 +22,9 @@ public class EmpServiceA implements EmpService {
         empList.forEach(emp -> {
             String gender = emp.getGender();
             if("1".equals(gender)) {
-                emp.setGender("male");
+                emp.setGender("male WW");
             } else if("2".equals(gender)) {
-                emp.setGender("female");
+                emp.setGender("female WW");
             }
 
             String job = emp.getJob();

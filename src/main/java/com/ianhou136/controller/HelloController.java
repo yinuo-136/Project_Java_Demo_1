@@ -40,14 +40,6 @@ public class HelloController {
         return id.toString() + " " + name;
     }
 
-    @RequestMapping("/listEmp")
-    public List<Emp> list() {
-        EmpService serv = new EmpServiceA();
-
-
-        return serv.listEmp();
-
-    }
 
 
 }

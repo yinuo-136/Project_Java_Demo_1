@@ -2,7 +2,7 @@ package com.ianhou136.controller;
 
 import com.ianhou136.pojo.Emp;
 import com.ianhou136.service.EmpService;
-import com.ianhou136.service.impl.EmpServiceA;
+import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,11 +12,12 @@ import java.util.List;
 @RestController
 public class EmpController {
 
-    private EmpService empService = new EmpServiceA();
+    @Resource(name = "empServiceA")
+    private EmpService empService;
 
     @RequestMapping("/listEmp")
     public List<Emp> list() {
-
+        System.out.println("hello ");
         return empService.listEmp();
 
     }

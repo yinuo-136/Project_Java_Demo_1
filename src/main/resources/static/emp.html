@@ -12,6 +12,7 @@
 <script src="./element-ui/index.js"></script>
 <script src="./js/axios-0.18.0.js"></script>
 
+
 <body>
     <h1 align="center">员工信息列表展示</h1>
     <div id="app">
@@ -48,8 +49,8 @@
         },
         mounted(){
             axios.get('/listEmp').then(res=>{
-                if(res.data.code){
-                    this.tableData = res.data.data;
+                if(res.data){
+                    this.tableData = res.data;
                 }
             });
         },
